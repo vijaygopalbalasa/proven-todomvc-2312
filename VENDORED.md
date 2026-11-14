@@ -1,0 +1,1 @@
+The folder mithril/ is examples/mithril from https://github.com/tastejs/todomvc at commit ff43b02e59dfa604386bb382034b2cd07c2bcd8a, copied unchanged (including its own .gitignore and vendored node_modules files). Served as static files, never built or installed.
