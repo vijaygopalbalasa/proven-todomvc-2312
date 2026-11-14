@@ -1,0 +1,44 @@
+{
+  "receipt": 1,
+  "ticket": "T-1",
+  "title": "Deleting an active todo from the Active view removes that todo",
+  "settings": {
+    "app": "mithril",
+    "timeout_s": 300,
+    "max_attempts": 4,
+    "start_url": "http://localhost:8098/"
+  },
+  "frozen": {
+    "commit": "04a5c616356a7b4ecdf5898ca7f93f4711d54385",
+    "test": "tickets/T-1_test.md",
+    "test_sha256": "0e18234a849401f4843871a398c5d1af7efea6ebf9821deea9f8516170e81313",
+    "ticket": "tickets/T-1.md",
+    "ticket_sha256": "8d047ee6675860a7e8efbcf19712df9d808b9222baa2afb28812b211bab15987"
+  },
+  "red": {
+    "commit": "f68d6d0b0f3a2870149ac7b02f21572b36f4ee58",
+    "failed_step": 6,
+    "failed_step_title": "Back to All",
+    "kane_one_liner": "The final check expected two todos, but the page contained only keep-b after the All filter was selected.",
+    "kane_reason": "Final verification failed: \"the list shows exactly two todos, done-one and keep-b, and keep-a is not in the list.\"",
+    "evidence_sha256": "a9c6934aae457d80d1bd97d1afa523b6e88106351faa3bcd9913fc5df66aa5a5",
+    "kane": "kane-cli",
+    "kane_cli": "0.10.4",
+    "duration_s": 239,
+    "credits": 100.41,
+    "app_tree": "8514a440fcea117305c40957466cd0424b8264d2"
+  },
+  "green": {
+    "commit": "b2f89974f9fe628e644cc6aade3ab873eafbc3d3",
+    "steps_passed": 6,
+    "steps_total": 6,
+    "evidence_sha256": "10aad0f67bfab9e79556e98fe40366726cfc292013ecbe7c034ea856be4b9dd0",
+    "kane": "kane-cli",
+    "kane_cli": "0.10.4",
+    "duration_s": 208,
+    "credits": 67.37,
+    "failed_attempts": 0,
+    "app_tree": "c500c10a85c2d19147ba91b81142ffe7a066a108"
+  },
+  "receipt_sha256": "2f11f5b68c97af505fb3726efb891e659d03fbbd41e0400b3ef9279bf56281fd"
+}
