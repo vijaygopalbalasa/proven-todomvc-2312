@@ -1,0 +1,20 @@
+{
+  "ticket": "T-1",
+  "frozen_commit": "04a5c616356a7b4ecdf5898ca7f93f4711d54385",
+  "status": "red",
+  "attempts": 0,
+  "red": {
+    "commit": "f68d6d0b0f3a2870149ac7b02f21572b36f4ee58",
+    "failed_step": 6,
+    "failed_step_title": "Back to All",
+    "kane_one_liner": "The final check expected two todos, but the page contained only keep-b after the All filter was selected.",
+    "kane_reason": "Final verification failed: \"the list shows exactly two todos, done-one and keep-b, and keep-a is not in the list.\"",
+    "duration_s": 239,
+    "credits": 100.41,
+    "evidence_sha256": "a9c6934aae457d80d1bd97d1afa523b6e88106351faa3bcd9913fc5df66aa5a5",
+    "kane": "kane-cli",
+    "kane_cli": "0.10.4",
+    "app_tree": "8514a440fcea117305c40957466cd0424b8264d2",
+    "at": "2026-11-14T15:28:51.525Z"
+  }
+}
