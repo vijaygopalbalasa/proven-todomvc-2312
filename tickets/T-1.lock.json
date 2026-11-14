@@ -1,0 +1,15 @@
+{
+  "ticket": "T-1",
+  "ticket_path": "tickets/T-1.md",
+  "ticket_sha256": "8d047ee6675860a7e8efbcf19712df9d808b9222baa2afb28812b211bab15987",
+  "test_path": "tickets/T-1_test.md",
+  "test_sha256": "0e18234a849401f4843871a398c5d1af7efea6ebf9821deea9f8516170e81313",
+  "frozen_commit": "04a5c616356a7b4ecdf5898ca7f93f4711d54385",
+  "settings": {
+    "app": "mithril",
+    "timeout_s": 300,
+    "max_attempts": 4,
+    "start_url": "http://localhost:8098/"
+  },
+  "settings_sha256": "bcbf9ed9f97c6f074f1568083c10c401e4577437b01a939125a5e749d4f46283"
+}
