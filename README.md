@@ -45,17 +45,20 @@ Active view deleted `done-one` and left `keep-a` as a blank todo. After the chan
 
 ```
 git clone https://github.com/vijaygopalbalasa/proven-todomvc-2312 && cd proven-todomvc-2312
-npx github:vijaygopalbalasa/proven#250aff3 verify receipts/T-1.json            # git only, no login
-npx github:vijaygopalbalasa/proven#250aff3 verify receipts/T-1.json --replay   # Kane at red and at green
+npx github:vijaygopalbalasa/proven#d881f89 verify receipts/T-1.json            # git only, no login
+npx github:vijaygopalbalasa/proven#d881f89 verify receipts/T-1.json --replay   # Kane at red and at green
 ```
 
-`--replay` needs Kane CLI and a TestMu login. It runs Kane twice, about 4 to 5 minutes each, for about 130 to 140
-credits in all. Each run comes close to the 300 s limit that the lock pinned at freeze. I replayed it three times on
-Nov 14 from fresh clones. Twice it went all the way: Kane failed step 6 at red and passed all six steps at green. In
-one of those, Kane's words at red were "The All view still showed only keep-b after it was selected, instead of
-showing both done-one and keep-b." Once, Kane
-failed step 6 at red but the run went past 300 s, so `verify` reported the replay as skipped and only the git checks
-stood.
+`--replay` needs Kane CLI and a TestMu login. It runs Kane twice, about 7 to 10 minutes in all, for about 130 to 140
+credits. The lock pinned a limit of 300 s per Kane run at freeze, and replay runs get twice that.
+
+I replayed this receipt five times on Nov 14, each from a fresh clone. The first four ran on an earlier Proven that
+cut each replay run off at 300 s. Two of those went all the way: Kane failed step 6 at red and passed all
+six steps at green. In the other two, Kane failed step 6 at red but didn't finish within 300 s, so green never ran,
+and that build still printed CONFIRMED from the git checks alone. The fifth ran on the commit pinned above, which
+gives replay runs 600 s, and went all the way in 442 s. Kane's words at red that time: "Selecting All leaves out the
+completed todo done-one." For a replay cut off like those two, the pinned commit prints `CONFIRMED (git checks only)`
+and exits with code 2.
 
 The checks without Kane need Node, Playwright and Google Chrome:
 
@@ -83,8 +86,10 @@ The other two checks take the same addresses.
 
 ## How it was run
 
-Proven pinned to `250aff3`, Kane CLI and Claude Code headless, on Nov 14 2026, with commits under my own name. Kane's
-evidence packs and recordings stay on my machine because they carry account ids; receipts keep their sha256.
+Proven pinned to `250aff3`, Kane CLI and Claude Code headless, on Nov 14 2026, with commits under my own name. The
+commands under "Check it" use the later `d881f89`, which reads the same receipts and changes only how a replay is
+timed and reported. Kane's evidence packs and recordings stay on my machine because they carry account ids; receipts
+keep their sha256.
 
 My code, the ticket and the checks are MIT (LICENSE). TodoMVC is MIT (LICENSE-todomvc.md). NOTICE.md lists the
 vendored Mithril (MIT), todomvc-common (MIT) and todomvc-app-css (CC BY 4.0, Sindre Sorhus, unchanged).
