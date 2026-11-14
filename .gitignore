@@ -1,0 +1,5 @@
+# Kane's evidence and recordings carry the runner's name and email: never commit them.
+.testmuai/
+tickets/output-*/
+.proven/runs/
+*.evidence
