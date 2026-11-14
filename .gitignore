@@ -3,3 +3,4 @@
 tickets/output-*/
 .proven/runs/
 *.evidence
+/node_modules/

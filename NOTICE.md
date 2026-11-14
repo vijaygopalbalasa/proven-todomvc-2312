@@ -13,4 +13,4 @@ Osmani, Sindre Sorhus, Pascal Hartig, Stephen Sawchuk). Inside it:
   of index.html). Changes made by the coding agent in this repo, and only these: mithril/js/controllers/todo.js and
   mithril/js/views/main-view.js (see the commit "T-1: app change that Kane passed").
 
-The check in check/check-2312.cjs is ours (MIT).
+The checks in check/ are ours (MIT).
