@@ -10,6 +10,8 @@ Active view, delete `keep-a`, then go back to All. `keep-a` is still there, and 
 
 You can see it in 30 seconds on the live example at https://todomvc.com/examples/mithril/ .
 
+The fix is open as a pull request on TodoMVC: https://github.com/tastejs/todomvc/pull/2318
+
 ## What happened
 
 - I wrote ticket T-1 from the issue's steps and expected result. It names no cause and no file. After adding the three
