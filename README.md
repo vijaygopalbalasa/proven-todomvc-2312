@@ -51,7 +51,7 @@ npx github:vijaygopalbalasa/proven#d881f89 verify receipts/T-1.json            #
 npx github:vijaygopalbalasa/proven#d881f89 verify receipts/T-1.json --replay   # Kane at red and at green
 ```
 
-`--replay` needs Kane CLI and a TestMu login. It runs Kane twice, about 7 to 10 minutes in all, for about 130 to 140
+`--replay` needs Kane CLI and a TestMu login. It runs Kane twice, about 7 to 10 minutes in all, for about 130 to 170
 credits. The lock pinned a limit of 300 s per Kane run at freeze, and replay runs get twice that.
 
 I replayed this receipt five times on Nov 14, each from a fresh clone. The first four ran on an earlier Proven that
@@ -61,6 +61,10 @@ and that build still printed CONFIRMED from the git checks alone. The fifth ran 
 gives replay runs 600 s, and went all the way in 442 s. Kane's words at red that time: "Selecting All leaves out the
 completed todo done-one." For a replay cut off like those two, the pinned commit prints `CONFIRMED (git checks only)`
 and exits with code 2.
+
+A sixth replay, on Nov 20 from a fresh clone with the command above, went all the way in 531 s for 170 credits: Kane
+failed step 6 at red ("The check expected a completed todo named done-one, but the available list data did not
+contain it.") and passed all six steps at green.
 
 The checks without Kane need Node, Playwright and Google Chrome:
 
